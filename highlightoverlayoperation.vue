@@ -6,7 +6,6 @@
 	</div>
 </template>
 
-<!-- Script tag for external ts file -->
 <!-- <script lang="ts" src="./highlightoverlayoperation.ts"></script> -->
 
 <script lang="js">
