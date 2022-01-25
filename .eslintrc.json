@@ -1,0 +1,46 @@
+//
+// This file used only for codacy, since actual linting takes place when the projects in /extension and /pagescript are run.
+// Codacy is not smart enough to find the lint configs for those projects, so it's duplicated here.
+//
+// In other words, the contents of this file are NOT included in the build chain, and only as a concession to tooling.
+// 
+
+{
+  "globals": {
+    "$": true,
+    "jQuery": true,
+    "_": true,
+    "lodash": true,
+    "moment": true
+  },
+  "root": true,
+  "env": {
+    "node": true,
+    "webextensions": true
+  },
+  "extends": [
+    "plugin:vue/essential",
+    "@vue/standard",
+    "@vue/typescript/recommended"
+  ],
+  "parserOptions": {
+    "ecmaVersion": 2020,
+    "parser": "babel-eslint"
+  },
+  "rules": {
+    "semi": 0,
+    "no-tabs": 0,
+    "indent": 0
+  },
+  "overrides": [
+    {
+      "files": [
+        "**/__tests__/*.{j,t}s?(x)",
+        "**/tests/unit/**/*.spec.{j,t}s?(x)"
+      ],
+      "env": {
+        "jest": true
+      }
+    }
+  ]
+}
