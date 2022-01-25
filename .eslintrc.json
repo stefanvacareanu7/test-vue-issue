@@ -18,11 +18,6 @@
     "node": true,
     "webextensions": true
   },
-  "extends": [
-    "plugin:vue/essential",
-    "@vue/standard",
-    "@vue/typescript/recommended"
-  ],
   "parserOptions": {
     "ecmaVersion": 2020,
     "parser": "babel-eslint"
@@ -37,6 +32,11 @@
         "jest": true
       }
     }
+  ],  
+  "extends": [
+    "plugin:vue/essential",
+    "@vue/standard",
+    "@vue/typescript/recommended"
   ],
   "rules": {
     "semi": 0,
