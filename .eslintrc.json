@@ -27,17 +27,6 @@
     "ecmaVersion": 2020,
     "parser": "babel-eslint"
   },
-  "overrides": [
-    {
-      "files": [
-        "**/__tests__/*.{j,t}s?(x)",
-        "**/tests/unit/**/*.spec.{j,t}s?(x)"
-      ],
-      "env": {
-        "jest": true
-      }
-    }
-  ],
   "rules": {
     "semi": 0,
     "no-tabs": 0,
@@ -59,5 +48,16 @@
     "@typescript-eslint/no-explicit-any": 0,
     "@typescript-eslint/no-this-alias": 0,
     "@typescript-eslint/camelcase": 0
-  }
+  },
+    "overrides": [
+    {
+      "files": [
+        "**/__tests__/*.{j,t}s?(x)",
+        "**/tests/unit/**/*.spec.{j,t}s?(x)"
+      ],
+      "env": {
+        "jest": true
+      }
+    }
+  ]
 }
