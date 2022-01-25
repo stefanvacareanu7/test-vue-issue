@@ -1,0 +1,7 @@
+---
+exclude_paths:
+  - "testsite/**"
+  - "misc/**"
+  - "pagescript/coverage/**"
+  - "**/deprecated/**"
+  - "**.md**"
