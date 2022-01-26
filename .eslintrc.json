@@ -19,7 +19,7 @@
     "webextensions": true
   },
   "extends": [
-    "plugin:vue/essential
+    "plugin:vue/essential",
     "@vue/standard",
     "@vue/typescript/recommended"
   ],
