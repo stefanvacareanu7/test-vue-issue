@@ -1,10 +1,3 @@
-//
-// This file used only for codacy, since actual linting takes place when the projects in /extension and /pagescript are run.
-// Codacy is not smart enough to find the lint configs for those projects, so it's duplicated here.
-//
-// In other words, the contents of this file are NOT included in the build chain, and only as a concession to tooling.
-// 
-
 {
   "globals": {
     "$": true,
@@ -20,7 +13,7 @@
   },
   "extends": [
     "plugin:vue/essential",
-    "@vue/standard
+    "@vue/standard",
     "@vue/typescript/recommended"
   ],
   "parserOptions": {
