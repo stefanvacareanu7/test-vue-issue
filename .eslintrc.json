@@ -1,3 +1,10 @@
+//
+// This file used only for codacy, since actual linting takes place when the projects in /extension and /pagescript are run.
+// Codacy is not smart enough to find the lint configs for those projects, so it's duplicated here.
+//
+// In other words, the contents of this file are NOT included in the build chain, and only as a concession to tooling.
+// 
+
 {
   "globals": {
     "$": true,
@@ -36,6 +43,7 @@
     "no-var": 0,
     "padded-blocks": 0,
     "func-call-spacing": 0,
+    "vue/multi-word-component-names": 0,
     "@typescript-eslint/no-non-null-assertion": 0,
     "@typescript-eslint/no-explicit-any": 0,
     "@typescript-eslint/no-this-alias": 0,
