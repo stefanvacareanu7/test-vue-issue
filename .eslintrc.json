@@ -20,7 +20,7 @@
   },
   "extends": [
     "plugin:vue/essential",
-    "@vue/standard",
+    "@vue/standard
     "@vue/typescript/recommended"
   ],
   "parserOptions": {
