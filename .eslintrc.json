@@ -3,8 +3,5 @@
   "parserOptions": {
     "sourceType": "module",
     "allowImportExportEverywhere": true
-  },
-  "rules": {
-      "no-var": 0
   }
 }
