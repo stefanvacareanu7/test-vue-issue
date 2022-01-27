@@ -29,7 +29,7 @@
   },
   "rules": {
     "semi": 0,
-    "no-tabs: 0,
+    "no-tabs": 0,
     "indent": 0,
     "eqeqeq": 0,
     "space-before-function-paren": 0,
@@ -43,7 +43,6 @@
     "no-var": 0,
     "padded-blocks": 0,
     "func-call-spacing": 0,
-    "vue/multi-word-component-names": 0,
     "@typescript-eslint/no-non-null-assertion": 0,
     "@typescript-eslint/no-explicit-any": 0,
     "@typescript-eslint/no-this-alias": 0,
