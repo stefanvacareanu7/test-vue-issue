@@ -67,6 +67,7 @@
       "operator-linebreak": 0,
       "no-multiple-empty-lines": 0,
       "no-eval": 0,
+      "no-var": 0,
       "padded-blocks": 0,
       "vue/multi-word-component-names": 0,
       "func-call-spacing": 0
