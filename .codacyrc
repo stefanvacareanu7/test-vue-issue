@@ -1,0 +1,8 @@
+{
+    "tools": [
+    {
+        "name": "eslint"
+    }
+    ],
+    "files" : ["extension/src/components/contentscript/highlightoverlayoperation.vue", "extension/src/components/contentscript/taglistoperation.vue", "pagescript/src/components/mixins/patternutilitymixin.ts"]
+}
