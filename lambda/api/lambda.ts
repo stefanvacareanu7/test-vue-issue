@@ -28,9 +28,6 @@ api.register(graphApi, {prefix: '/v1'})
 
 type LambdaResponse = {
     body: string
-Minor icon MINOR
-Code Style
-Unexpected any. Specify a different type.
     headers: { [key: string]: any }
     statusCode: number
 }
