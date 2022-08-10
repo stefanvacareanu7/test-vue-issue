@@ -1,0 +1,32 @@
+{
+  "name": "rtmi-api-lambda-handler",
+  "version": "1.0.0",
+  "description": "Handler to invoke lambda",
+  "main": "lambda.js",
+  "scripts": {
+    "build": "npm install --production --no-audit && tsc",
+    "clean": "tsc --build --clean",
+    "test": "jest --coverage ./*"
+  },
+  "dependencies": {
+    "@lmig/rtmi-core-utilities": "0.12.16",
+    "mongodb": "4.3.1",
+    "mysql2": "2.3.3"
+  },
+  "devDependencies": {
+    "@shelf/jest-mongodb": "2.2.1",
+    "@types/aws-lambda": "8.10.101",
+    "@types/jest": "26.0.14",
+    "@types/node": "13.7.0",
+    "jest": "27.1.1",
+    "jest-extended": "1.2.1",
+    "jest-junit": "10.0.0",
+    "ts-jest": "27.1.2",
+    "typescript": "^4.5.4"
+  },
+  "keywords": [
+    "lambda"
+  ],
+  "author": "bret.lichtenwald@libertymutual.com",
+  "repository": "https://git.forge.lmig.com/projects/rtmi/repos/rtmi-api-lambda"
+}
