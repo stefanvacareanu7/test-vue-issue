@@ -1,3 +1,0 @@
-{
-  "app": "node -r ts-node/register -r dotenv/config bin/rtmi-serverless-api.ts dotenv_config_path=.env.local"
-}
