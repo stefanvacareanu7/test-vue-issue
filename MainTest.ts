@@ -241,18 +241,6 @@ export class MainState {
         makeObservable(this);
     }
 
-    private PostAddDataset(dataset: IDataset): IDataset {
-        main.Context.GetRoot().UpdateEntity(MainMenuItemType.DATASET, new Map([[dataset._id, dataset]]), true);
-        const currentWorkspace = main.Context.GetRoot().ActiveDataSpace?.DataSpace as IWorkspace;
-        if (currentWorkspace) {
-            currentWorkspace.AddDatasetId(dataset._id);
-            MontanaGateway.Instance.UpdateDatasetIds(currentWorkspace).then(async () => {
-                await main.UpdateDatasetsInDataSpace(currentWorkspace);
-            });
-        }
-        return main.Context.GetRoot().Datasets.get(dataset._id);
-    }
-
     public Init(): void {
         MontanaSocketGateway.Instance.Connect();
         if (window) {
