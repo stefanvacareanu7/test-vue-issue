@@ -1,25 +1,21 @@
 {
-    "extends": "tsconfig.base.json",
-    "compilerOptions": {
-        "baseUrl": "./",
-        "target": "esnext",
-        "types": ["mocha"],
-        "module": "esnext",
-        "rootDir": "..",
-        "rootDirs": ["src", "../montana-api/src"],
-        "resolveJsonModule": true,
-        "composite": true,
-        "esModuleInterop": true,
-        "jsx": "react",
-        "incremental": true,
-        "sourceMap": true,
-        "paths": {
-            "@app/*": ["./src/*"],
-            "montana-api": ["../montana-api/src"]
-        },
-        "lib": ["esnext", "dom"],
-        "typeRoots": ["node_modules/@types"]
-    },
-    "include": ["./src/**/*", "../montana-api/src/**/*", "../montana-api/src/**/*.json"],
-    "exclude": ["test", "./src/**/*.test.tsx"]
+  "compilerOptions": {
+    "module": "commonjs",
+    "declaration": true,
+    "removeComments": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "target": "es2017",
+    "sourceMap": true,
+    "outDir": "./dist",
+    "baseUrl": "./",
+    "incremental": true,
+    "skipLibCheck": true,
+    "strictNullChecks": false,
+    "noImplicitAny": false,
+    "strictBindCallApply": false,
+    "forceConsistentCasingInFileNames": false,
+    "noFallthroughCasesInSwitch": false
+  }
 }
