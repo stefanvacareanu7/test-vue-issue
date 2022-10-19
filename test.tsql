@@ -1,0 +1,46 @@
+IF OBJECT_ID('tempdb..#OverflowColumns') IS NOT NULL BEGIN
+    DROP TABLE #OverflowColumns
+END
+  
+CREATE TABLE #OverflowColumns
+    (
+        DatabaseName SYSNAME NOT NULL,
+        TableName SYSNAME NOT NULL,
+        ColumnName SYSNAME NOT NULL,
+        DataType SYSNAME NOT NULL,
+        IdentCurrent NUMERIC(38,0) NULL,
+        PercentOfMax NUMERIC(10,2) NULL
+    )
+  
+EXECUTE sp_MSforeachdb 'USE [?]
+;WITH CTE_DT AS
+    (
+        SELECT C.object_id, S.name + ''.'' + SO.name AS TableName, C.name AS ColumnName, C.user_type_id, C.precision, T.name AS DataType, IDENT_CURRENT(S.name + ''.'' + SO.name) AS IdentCurrent
+        FROM sys.columns C
+        JOIN sys.objects SO
+            ON C.object_id = SO.object_id
+            AND SO.type = ''U''
+        JOIN sys.schemas S
+            ON SO.schema_id = S.schema_id
+        JOIN sys.types T
+            ON C.user_type_id = T.user_type_id
+        WHERE C.is_identity = 1
+    )
+,CTE_DT2 AS
+    (
+        SELECT object_id, TableName, ColumnName, DataType, IdentCurrent,
+            CASE
+                WHEN user_type_id = 48 THEN IdentCurrent / 255
+                WHEN user_type_id = 52 THEN IdentCurrent / 32767
+                WHEN user_type_id = 56 THEN IdentCurrent / 2147483647
+                WHEN user_type_id = 127 THEN IdentCurrent / 9223372036854775807
+                WHEN user_type_id IN (106,108) THEN IdentCurrent / CAST(REPLICATE(''9'', precision) AS NUMERIC(38,0))
+            END AS PercentOfMax
+        FROM CTE_DT
+    )
+INSERT #OverflowColumns (DatabaseName, TableName, ColumnName, DataType, IdentCurrent, PercentOfMax)
+SELECT DB_NAME(), TableName, ColumnName, DataType, IdentCurrent, PercentOfMax
+FROM CTE_DT2
+WHERE PercentOfMax > 0.9
+'
+SELECT * FROM #OverflowColumns
