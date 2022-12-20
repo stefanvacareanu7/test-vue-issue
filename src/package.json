@@ -1,0 +1,20 @@
+{
+  "name": "mallpay",
+  "version": "5.5.0",
+  "devDependencies": {
+    "gulp-concat": "^2.6.0"
+  },
+  "dependencies": {
+    "es6-promise": "^3.0.2",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-clean-css": "^3.9.0",
+    "gulp-replace": "^0.6.1",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.1",
+    "bootstrap-sass": "3.3.7",
+    "@fortawesome/fontawesome-free": "5.15.1",
+    "c3": "^0.4.18"
+  }
+}
+
