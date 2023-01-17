@@ -1,0 +1,2 @@
+# test-vue-issue
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/207f092e808c453b831d8cd96f96ae1a)](https://app.codacy.com/gh/stefanvacareanu7/test-vue-issue?utm_source=github.com&utm_medium=referral&utm_content=stefanvacareanu7/test-vue-issue&utm_campaign=Badge_Grade_Settings)
